@@ -32,6 +32,7 @@ class MainPageQaScooter():
         qu_header_1 = self.driver.find_element(*Locators.QUESTION_1_HEADER)
         actually_value = qu_header_1.text
         expected_value = "Сутки — 400 рублей. Оплата курьеру — наличными или картой."
+        WebDriverWait(self.driver, 10)
         assert actually_value == expected_value, f"Заголовок вопроса 1 должен быть '{expected_value}', но было '{qu_header_1}'"
 
     def check_element_2(self):
@@ -40,6 +41,7 @@ class MainPageQaScooter():
         qu_header_2 = WebDriverWait(self.driver,5).until(EC.presence_of_element_located((Locators.QUESTION_2_HEADER)))
         actually_value = qu_header_2.text
         expected_value = "Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим."
+        WebDriverWait(self.driver, 10)
         assert actually_value == expected_value, f"Заголовок вопроса 2 должен быть '{expected_value}', но было '{qu_header_2}'"
 
     def check_element_3(self):
@@ -48,6 +50,7 @@ class MainPageQaScooter():
         qu_header_3 = WebDriverWait(self.driver,5).until(EC.presence_of_element_located((Locators.QUESTION_3_HEADER)))
         actually_value = qu_header_3.text
         expected_value = "Допустим, вы оформляете заказ на 8 мая. Мы привозим самокат 8 мая в течение дня. Отсчёт времени аренды начинается с момента, когда вы оплатите заказ курьеру. Если мы привезли самокат 8 мая в 20:30, суточная аренда закончится 9 мая в 20:30."
+        WebDriverWait(self.driver, 10)
         assert actually_value == expected_value, f"Заголовок вопроса 3 должен быть '{expected_value}', но было '{qu_header_3}'"
 
     def check_element_4(self):
@@ -56,6 +59,7 @@ class MainPageQaScooter():
         qu_header_4 = WebDriverWait(self.driver,5).until(EC.presence_of_element_located((Locators.QUESTION_4_HEADER)))
         actually_value = qu_header_4.text
         expected_value = "Только начиная с завтрашнего дня. Но скоро станем расторопнее."
+        WebDriverWait(self.driver, 10)
         assert actually_value == expected_value, f"Заголовок вопроса 4 должен быть '{expected_value}', но было '{qu_header_4}'"
 
     def check_element_5(self):
@@ -64,6 +68,7 @@ class MainPageQaScooter():
         qu_header_5 = WebDriverWait(self.driver,5).until(EC.presence_of_element_located((Locators.QUESTION_5_HEADER)))
         actually_value = qu_header_5.text
         expected_value = "Пока что нет! Но если что-то срочное — всегда можно позвонить в поддержку по красивому номеру 1010."
+        WebDriverWait(self.driver, 10)
         assert actually_value == expected_value, f"Заголовок вопроса 5 должен быть '{expected_value}', но было '{qu_header_5}'"
 
     def check_element_6(self):
@@ -72,6 +77,7 @@ class MainPageQaScooter():
         qu_header_6 = WebDriverWait(self.driver,5).until(EC.presence_of_element_located((Locators.QUESTION_6_HEADER)))
         actually_value = qu_header_6.text
         expected_value = "Самокат приезжает к вам с полной зарядкой. Этого хватает на восемь суток — даже если будете кататься без передышек и во сне. Зарядка не понадобится."
+        WebDriverWait(self.driver, 10)
         assert actually_value == expected_value, f"Заголовок вопроса 6 должен быть '{expected_value}', но было '{qu_header_6}'"
 
     def check_element_7(self):
@@ -80,6 +86,7 @@ class MainPageQaScooter():
         qu_header_7 = WebDriverWait(self.driver,5).until(EC.presence_of_element_located((Locators.QUESTION_7_HEADER)))
         actually_value = qu_header_7.text
         expected_value = "Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои."
+        WebDriverWait(self.driver, 10)
         assert actually_value == expected_value, f"Заголовок вопроса 7 должен быть '{expected_value}', но было '{qu_header_7}'"
 
     def check_element_8(self):
@@ -88,6 +95,7 @@ class MainPageQaScooter():
         qu_header_8 = WebDriverWait(self.driver,5).until(EC.presence_of_element_located((Locators.QUESTION_8_HEADER)))
         actually_value = qu_header_8.text
         expected_value = "Да, обязательно. Всем самокатов! И Москве, и Московской области."
+        WebDriverWait(self.driver, 10)
         assert actually_value == expected_value, f"Заголовок вопроса 8 должен быть '{expected_value}', но было '{qu_header_8}'"
 
 

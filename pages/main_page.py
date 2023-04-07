@@ -10,22 +10,6 @@ class MainPageQaScooter():
     def __init__(self, driver):
         self.driver = driver
 
-    def wait_main_page(self):
-        WebDriverWait(self.driver,5).until(EC.presence_of_element_located((Locators.SCOOTER_COOP_DAYS_HEADER)))
-
-    def click_cookie(self):
-        cookie = WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((Locators.COOKIE_ELEMENT)))
-        cookie.click()
-
-    def scroll_main_page(self):
-        questions_header = self.driver.find_element(*Locators.QUESTIONS_IMPORTANT)
-        self.driver.execute_script("arguments[0].scrollIntoView();", questions_header)
-
-    def prepare_to_check(self):
-        self.wait_main_page()
-        self.click_cookie()
-        self.scroll_main_page()
-
     def check_element_1(self):
         question_1 = WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((Locators.QUESTION_1)))
         question_1.click()

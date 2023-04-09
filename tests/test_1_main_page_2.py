@@ -1,3 +1,4 @@
+import pytest
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from locators.locators import Locators
@@ -6,8 +7,9 @@ from pages.main_page_2 import MainPageQaScooter
 
 
 
-class TestMainPageQaScooter():
-    def test_questions_important_1_waitfor_correct_header_1(self, driver, get_the_page, go_to_questions_important):
+class TestMainPageQaScooter:
+
+    def test_questions_important_waitfor_correct_header_1(self, driver, get_the_page, go_to_questions_important):
         MainPageQaScooter(driver).check_element_1()
         qu_header_1 = MainPageQaScooter(driver).question_header_1()
         actually_value = qu_header_1.text

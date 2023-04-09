@@ -1,3 +1,4 @@
+import pytest
 from selenium.webdriver.support import expected_conditions as EC
 from locators.locators import Locators
 from selenium.webdriver.support.wait import WebDriverWait
